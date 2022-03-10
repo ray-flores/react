@@ -18,12 +18,18 @@
   <footer>
     <p>Footer</p>
   </footer>
+  <!-- comment -->
 
   <script type="text/babel">
     const Banner = () => {
+      const title = "Welcome to a react website"
+      const subtitle = "this is a website for Ray to practise react"
+
       return (
-        <div>
-          <p>Banner</p>  
+        // this is a comment
+        <div className="banner">
+          <h2>{title.toLocaleUpperCase()}</h2> 
+          <p>{subtitle}</p> 
         </div>
       )
     }
