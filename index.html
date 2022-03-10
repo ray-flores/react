@@ -30,6 +30,8 @@
         <div className="banner">
           <h2>{title.toLocaleUpperCase()}</h2> 
           <p>{subtitle}</p> 
+          <p>Today's date is: {new Date().toDateString()}</p>
+          <p>Random Number: {Math.random() * 100}</p>
         </div>
       )
     }
