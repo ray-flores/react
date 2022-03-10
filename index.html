@@ -24,6 +24,13 @@
     const Banner = () => {
       const title = "Welcome to a react website"
       const subtitle = "this is a website for Ray to practise react"
+      const address = "https://www.rayflores.ca"
+
+      // const handleClick = (e) => {
+      //   console.log('you clicked me')
+      //   console.log('the site title is:', title)
+      //   console.log(e)
+      // }
 
       return (
         // this is a comment
@@ -32,6 +39,8 @@
           <p>{subtitle}</p> 
           <p>Today's date is: {new Date().toDateString()}</p>
           <p>Random Number: {Math.random() * 100}</p>
+          <a href={address}>Visit my portfolio</a>
+          <button onClick={(e) => console.log(e)}>Click Me</button>
         </div>
       )
     }
