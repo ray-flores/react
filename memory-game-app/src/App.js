@@ -22,18 +22,18 @@ function App() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
 
-  setCards(shuffleCards)
-  setTurns(0)
-  
-
+      setCards(shuffledCards)
+      setTurns(0)
   }
 
+  
+  console.log(cards, turns)
 
 
   return (
     <div className="App">
       <h1>Magic Memory Game</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <button onClick={shuffleCards} >New Game</button>
     </div>
   );
 }
