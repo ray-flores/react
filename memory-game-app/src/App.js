@@ -9,7 +9,8 @@ const cardImages = [
   { "src": "/images/mario.png" },
   { "src": "/images/peach.png" },
   { "src": "/images/toad.png" },
-  { "src": "/images/yoshi.png" }
+  { "src": "/images/yoshi.png" },
+  { "src": "/images/falcon.png"}
 ];
 
 function App() {
