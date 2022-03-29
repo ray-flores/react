@@ -2,7 +2,7 @@ import { useState } from "react";
 //styles
 import "./SingleCard.css";
 
-export default function SingleCard() {
+export default function SingleCard({ card }) {
   const [cards, setCards] = useState([]);
 
   return (
