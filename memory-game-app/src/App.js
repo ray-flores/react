@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import SingleCard from './components/SingleCard';
 
 // card array
 const cardImages = [
@@ -38,12 +39,7 @@ function App() {
 
       <div className='card-grid'>
         {cards.map(card => (
-          <div className='card' key={card.id}>
-            <div>
-              <img className='front' alt='card front' src={card.src} />
-              <img className='back' alt='card back' src="/images/Mario-logo.png" /> 
-            </div>
-          </div>
+          <SingleCard key={card.id} />
         ))}
       </div>
 
