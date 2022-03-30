@@ -35,7 +35,8 @@ function App() {
   
   // handle a choice
   const handleChoice = (card) => {
-    console.log(card);
+    //console.log(card);
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
 
