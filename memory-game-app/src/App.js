@@ -56,12 +56,12 @@ function App() {
         resetTurn();
       } else {
         //console.log('not a match');
-        resetTurn();
+        setTimeout(() => resetTurn(), 1000);
       }
     }
   }, [choiceOne, choiceTwo])
 
-  console.log(cards)
+  //console.log(cards)
 
   // reset choices and incr turn
   const resetTurn = () => {
