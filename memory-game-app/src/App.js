@@ -4,14 +4,14 @@ import SingleCard from './components/SingleCard';
 
 // card array
 const cardImages = [
-  { "src": "/images/bowser.png" },
-  { "src": "/images/donkey-kong.png" },
-  { "src": "/images/luigi.png" },
-  { "src": "/images/mario.png" },
-  { "src": "/images/peach.png" },
-  { "src": "/images/toad.png" },
-  { "src": "/images/yoshi.png" },
-  { "src": "/images/falcon.png"}
+  { "src": "/images/bowser.png", matched: false },
+  { "src": "/images/donkey-kong.png", matched: false },
+  { "src": "/images/luigi.png", matched: false },
+  { "src": "/images/mario.png", matched: false },
+  { "src": "/images/peach.png", matched: false },
+  { "src": "/images/toad.png", matched: false },
+  { "src": "/images/yoshi.png", matched: false },
+  { "src": "/images/falcon.png", matched: false}
 ];
 
 function App() {
