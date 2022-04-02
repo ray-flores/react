@@ -43,14 +43,25 @@ function App() {
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       if (choiceOne.src === choiceTwo.src) {
-        console.log('match');
+        //console.log('match');
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.src === choiceOne.src) {
+              return {...card, matched: true}
+            } else {
+              return card;
+            }
+          })
+        })
         resetTurn();
       } else {
-        console.log('not a match');
+        //console.log('not a match');
         resetTurn();
       }
     }
   }, [choiceOne, choiceTwo])
+
+  console.log(cards)
 
   // reset choices and incr turn
   const resetTurn = () => {
