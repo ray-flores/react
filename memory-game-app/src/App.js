@@ -17,9 +17,9 @@ const cardImages = [
 function App() {
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
-  const [choiceOne, setChoiceOne] = useState(null)
-  const [choiceTwo, setChoiceTwo] = useState(null)
-  const [disabled, setDisabled] = useState(false)
+  const [choiceOne, setChoiceOne] = useState(null);
+  const [choiceTwo, setChoiceTwo] = useState(null);
+  const [disabled, setDisabled] = useState(false);
 
   // duplicate cards once and shuffle
   const shuffleCards = () => {
@@ -27,8 +27,10 @@ function App() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
 
-      setCards(shuffledCards)
-      setTurns(0)
+      setChoiceOne(null);
+      setChoiceTwo(null);
+      setCards(shuffledCards);
+      setTurns(0);
   }
   
   // handle a choice
@@ -60,7 +62,6 @@ function App() {
     }
   }, [choiceOne, choiceTwo])
 
-  //console.log(cards)
 
   // reset choices and incr turn
   const resetTurn = () => {
@@ -69,6 +70,11 @@ function App() {
     setTurns(prevTurns => prevTurns + 1);
     setDisabled(false);
   }
+
+  // start a new game automatically
+  useEffect(() => {
+    shuffleCards();
+  }, [])
 
   return (
     <div className="App">
@@ -86,7 +92,7 @@ function App() {
           />
         ))}
       </div>
-
+      <p>Turns: {turns}</p>  
     </div>
   );
 }
