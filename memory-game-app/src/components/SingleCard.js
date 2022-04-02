@@ -2,7 +2,7 @@ import { useState } from "react";
 //styles
 import "./SingleCard.css";
 
-export default function SingleCard({ card, handleChoice, compareChoices}) {
+export default function SingleCard({ card, handleChoice, flipped}) {
   const [cards, setCards] = useState([]);
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ export default function SingleCard({ card, handleChoice, compareChoices}) {
 
   return (
     <div className="card">
-      <div>
+      <div className={flipped ? "flipped" : ""}>
         <img className="front" alt="card front" src={card.src} />
         <img 
         className="back" 

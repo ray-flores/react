@@ -80,7 +80,8 @@ function App() {
           <SingleCard 
           handleChoice={ handleChoice }
           key={card.id} 
-          card={card} 
+          card={card}
+          flipped={ card === choiceOne || card === choiceTwo || card.matched } 
           />
         ))}
       </div>
