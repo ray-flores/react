@@ -39,6 +39,22 @@ function App() {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
+  //compare two choices from user
+  const compareChoices = () => {
+    if ((choiceOne && choiceTwo) && choiceOne.src === choiceTwo.src) {
+      console.log('They match', choiceOne, choiceTwo);
+      resetTurn();
+    } else {
+      console.log('They don\'t match', choiceOne, choiceTwo);
+    }
+  }
+
+  // reset choices and incr turn
+  const resetTurn = () => {
+    setChoiceOne(null)
+    setChoiceTwo(null)
+    setTurns(prevTurns => prevTurns + 1);
+  }
 
   return (
     <div className="App">

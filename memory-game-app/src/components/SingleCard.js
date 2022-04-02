@@ -2,11 +2,11 @@ import { useState } from "react";
 //styles
 import "./SingleCard.css";
 
-export default function SingleCard({ card, handleChoice }) {
+export default function SingleCard({ card, handleChoice, compareChoices}) {
   const [cards, setCards] = useState([]);
 
   const handleClick = () => {
-    handleChoice(card)
+    handleChoice(card);
   }
 
   return (
