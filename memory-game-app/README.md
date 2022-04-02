@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Memory Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A card matching memory game based on your favourite Nintendo characters! 
 
 ## Available Scripts
 
